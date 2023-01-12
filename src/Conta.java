@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public abstract class Conta {
     private int numero;
     private int agencia;
@@ -8,20 +10,20 @@ public abstract class Conta {
         return this.saldo;
     }
 
-    public Conta(int numero, int agencia, String banco, double saldo) {
-        this.numero = numero;
-        this.agencia = agencia;
+    public Conta(String banco, int agencia, int numero, double saldo) {
         this.banco = banco;
+        this.agencia = agencia;
+        this.numero = numero;
         this.saldo = saldo;
     }
 
     @Override
     public String toString() {
         return " Conta [" +
-                " numero = " + numero +
-                ", agencia = " + agencia +
-                ", banco = " + banco + '\'' +
-                ", saldo = " + saldo +
+                " Banco = " + banco +
+                ", Agência = " + agencia +
+                ", Número = " + numero + '\'' +
+                ", Saldo = " + saldo +
                 "] ";
     }
 

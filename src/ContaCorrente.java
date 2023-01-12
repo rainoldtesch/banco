@@ -1,20 +1,26 @@
+import java.util.Date;
+
 public class ContaCorrente extends Conta {
     private double chequeEspecial;
 
-    public ContaCorrente(int numero, int agencia, String banco, double saldo, double chequeEspecial) {
-        super(numero, agencia, banco, saldo);
+    public ContaCorrente(String banco, int agencia, int numero, double saldo, double chequeEspecial) {
+        super(banco, agencia, numero, saldo);
         this.chequeEspecial = chequeEspecial;
+    }
+
+    public ContaCorrente(String banco, int agencia, int numero, double chequeEspecial) {
+        super(banco, agencia, numero, chequeEspecial);
     }
 
     @Override
     public String toString() {
-        return super.toString() + "Conta Corrente [" +
-                " chequeEspecial = " + chequeEspecial +
-                "]";
+        return "Conta Corrente [ " +
+                "saldo = " + saldo +
+                ", cheque Especial = " + chequeEspecial +
+                " ]";
     }
 
     //implementação método sacar com cheque especial:
-
     @Override
     public boolean sacar(double quantia) {
         double disponivel = this.chequeEspecial + this.saldo;
