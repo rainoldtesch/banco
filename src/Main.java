@@ -50,7 +50,10 @@ public class Main {
                 novaContaCorrente.setChequeEspecial(chequeEspecial);
 
                 //mensagem de feedback para cadastro de nova conta corrente:
+                System.out.println(" ");
                 System.out.println("Conta corrente criada com sucesso!!!");
+                System.out.println("Banco: " + banco + " | Agência: " + agencia + " | Conta Corrente número: " + numero);
+                System.out.println("Limite de cheque especial: R$ " + chequeEspecial);
 
                 //contaCorrenteDB.addNovaContaCorrente(novaContaCorrente);
 
