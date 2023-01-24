@@ -1,9 +1,9 @@
 import java.util.Date;
 
 public abstract class Conta {
-    private int numero;
-    private int agencia;
     private String banco;
+    private int agencia;
+    private int numero;
     protected double saldo;
 
     public double getSaldo() {

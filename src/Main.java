@@ -1,12 +1,14 @@
 import db.contaCorrenteDB;
-
+import models.ContaCorrente;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        System.out.println(" --- Bem-vindo ao Banco Portifólio --- ");
+        System.out.println("     =================================");
+        System.out.println(" --- | Bem-vindo ao Banco Portifólio | --- ");
+        System.out.println("     =================================");
         int option;
         do {
             System.out.println(" ");
@@ -28,10 +30,10 @@ public class Main {
 
     public static void process(int option) throws Exception {
         switch (option) {
-            case 1 : {
+            case 1: {
                 Scanner scanner = new Scanner(System.in);
 
-                System.out.println("-------- CADASTRO DE NOVA CONTA CORRENTE --------");
+                System.out.println("-------- CADASTRO DE CONTA CORRENTE --------");
                 System.out.print("->> Qual o nome do Banco? ");
                 String banco = scanner.nextLine();
                 System.out.print("->> Qual a agência da nova conta? ");
@@ -41,9 +43,16 @@ public class Main {
                 System.out.print("->> Qual o valor de cheque especial? ");
                 double chequeEspecial = scanner.nextDouble();
 
-                ContaCorrente novaContaCorrente = new ContaCorrente(banco, agencia, numero, chequeEspecial);
+                ContaCorrente novaContaCorrente = new ContaCorrente();
+                novaContaCorrente.setBanco(banco);
+                novaContaCorrente.setAgencia(agencia);
+                novaContaCorrente.setNumero(numero);
+                novaContaCorrente.setChequeEspecial(chequeEspecial);
 
-                contaCorrenteDB.addNovaContaCorrente(novaContaCorrente);
+                //mensagem de feedback para cadastro de nova conta corrente:
+                System.out.println("Conta corrente criada com sucesso!!!");
+
+                //contaCorrenteDB.addNovaContaCorrente(novaContaCorrente);
 
                 break;
             }
@@ -52,4 +61,6 @@ public class Main {
 
                 break;
             }
+        }
+    }
 }
