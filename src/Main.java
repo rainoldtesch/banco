@@ -1,12 +1,14 @@
 import db.contaCorrenteDB;
-import models.ContaCorrente;
-import models.ContaPoupanca;
+import db.contaPoupancaDB;
+import models.Corrente;
+import models.Poupanca;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) throws Exception {
         System.out.println("     =================================");
         System.out.println(" --- | Bem-vindo ao Banco Portifólio | --- ");
@@ -14,9 +16,9 @@ public class Main {
         int option;
         do {
             System.out.println(" ");
-            System.out.println(" 1 - Criar nova Conta Corrente");
-            System.out.println(" 2 - Criar nova Conta Poupança");
-            System.out.println(" 3 - Criar nova Conta Salário");
+            System.out.println(" 1 - Criar nova models.Conta Corrente");
+            System.out.println(" 2 - Criar nova models.Conta Poupança");
+            System.out.println(" 3 - Criar nova models.Conta Salário");
             System.out.println(" 4 - Mostrar saldo da conta");
             System.out.println(" 5 - Sacar");
             System.out.println(" 6 - Depositar");
@@ -45,16 +47,16 @@ public class Main {
                 System.out.print("->> Qual o valor de cheque especial? ");
                 double chequeEspecial = scanner.nextDouble();
 
-                ContaCorrente novaContaCorrente = new ContaCorrente();
-                novaContaCorrente.setBanco(banco);
-                novaContaCorrente.setAgencia(agencia);
-                novaContaCorrente.setNumero(numero);
-                novaContaCorrente.setChequeEspecial(chequeEspecial);
+                //Corrente novaContaCorrente = new Corrente();
+                //novaContaCorrente.setBanco(banco);
+                //novaContaCorrente.setAgencia(agencia);
+                //novaContaCorrente.setNumero(numero);
+                //novaContaCorrente.setChequeEspecial(chequeEspecial);
 
                 //mensagem de feedback para cadastro de nova conta corrente:
                 System.out.println(" ");
-                System.out.println("Conta corrente criada com sucesso!!!");
-                System.out.println("Banco: " + banco + " | Agência: " + agencia + " | Conta Corrente número: " + numero);
+                System.out.println("models.Conta corrente criada com sucesso!!!");
+                System.out.println("Banco: " + banco + " | Agência: " + agencia + " | models.Conta Corrente número: " + numero);
                 System.out.println("Limite de cheque especial: R$ " + chequeEspecial);
 
                 //contaCorrenteDB.addNovaContaCorrente(novaContaCorrente);
@@ -73,16 +75,17 @@ public class Main {
                 System.out.print("->> Qual o número da nova conta Poupança? ");
                 int numero = scanner.nextInt();
 
-                ContaPoupanca novaContaPoupanca = new ContaPoupanca();
-                novaContaPoupanca.setBanco(banco);
-                novaContaPoupanca.setAgencia(agencia);
-                novaContaPoupanca.setNumero(numero);
+                //Poupanca novaContaPoupanca = new Poupanca();
+                //novaContaPoupanca.setBanco(banco);
+                //novaContaPoupanca.setAgencia(agencia);
+                //novaContaPoupanca.setNumero(numero);
 
                 //mensagem de feedback para cadastro de nova conta corrente:
                 System.out.println(" ");
-                System.out.println("Conta Poupança criada com sucesso!!!");
-                System.out.println("Banco: " + banco + " | Agência: " + agencia + " | Conta Poupança número: " + numero);
+                System.out.println("models.Conta Poupança criada com sucesso!!!");
+                System.out.println("Banco: " + banco + " | Agência: " + agencia + " | models.Conta Poupança número: " + numero);
 
+                //Poupanca novaContaPoupanca = new Poupanca(banco, agencia, numero);
                 //contaPoupancaDB.addNovaContaPoupanca(novaContaPoupanca);
 
                 break;
