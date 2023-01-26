@@ -16,7 +16,7 @@ public class contaCorrenteDB<Conta> {
         return contas;
     }
 
-    //public void addNovaContaCorrente(Conta conta) { contasMap.put(conta.getNumero()); }
+    //public void addNovaContaCorrente(models.Conta conta) { contasMap.put(conta.getNumero()); }
 
     //public contaCorrenteDB getContaPorNumero(int numero) { return contasMap.get(numero); }
 }
