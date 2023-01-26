@@ -1,5 +1,7 @@
 import db.contaCorrenteDB;
 import models.ContaCorrente;
+import models.ContaPoupanca;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -61,6 +63,27 @@ public class Main {
             }
 
             case 2: {
+                Scanner scanner = new Scanner(System.in);
+
+                System.out.println("-------- CADASTRO DE CONTA POUPANÇA --------");
+                System.out.print("->> Qual o nome do Banco? ");
+                String banco = scanner.nextLine();
+                System.out.print("->> Qual a agência da nova conta Poupança? ");
+                int agencia = scanner.nextInt();
+                System.out.print("->> Qual o número da nova conta Poupança? ");
+                int numero = scanner.nextInt();
+
+                ContaPoupanca novaContaPoupanca = new ContaPoupanca();
+                novaContaPoupanca.setBanco(banco);
+                novaContaPoupanca.setAgencia(agencia);
+                novaContaPoupanca.setNumero(numero);
+
+                //mensagem de feedback para cadastro de nova conta corrente:
+                System.out.println(" ");
+                System.out.println("Conta Poupança criada com sucesso!!!");
+                System.out.println("Banco: " + banco + " | Agência: " + agencia + " | Conta Poupança número: " + numero);
+
+                //contaPoupancaDB.addNovaContaPoupanca(novaContaPoupanca);
 
                 break;
             }
