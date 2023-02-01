@@ -1,7 +1,13 @@
 package models;
 
 public class Poupanca extends Conta{
-    public Poupanca(String banco, int agencia, int numero, TipoConta tipoConta, double saldo) {
-        super(banco, agencia, numero, TipoConta.POUPANCA, saldo);
+
+    private int diaAniversario;
+    private double taxaDeJuros;
+
+    public Poupanca(String nomeCliente, int agencia, int numero, double saldo) {
+        super(nomeCliente, agencia, numero, TipoConta.POUPANCA, saldo);
+        this.diaAniversario = diaAniversario;
+        this.taxaDeJuros = taxaDeJuros;
     }
 }

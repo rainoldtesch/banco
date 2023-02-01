@@ -2,7 +2,10 @@ package models;
 
 public class Corrente extends Conta {
 
-    public Corrente(String banco, int agencia, int numero, TipoConta tipoConta, double saldo) {
-        super(banco, agencia, numero, TipoConta.CORRENTE, saldo);
+    private double chequeEspecial;
+
+    public Corrente(String nomeCliente, int agencia, int numero, double saldo, double chequeEspecial) {
+        super(nomeCliente, agencia, numero, TipoConta.CORRENTE, saldo);
+        this.chequeEspecial = chequeEspecial;
     }
 }
