@@ -1,7 +1,12 @@
 package models;
 
 public class Salario extends Conta{
-    public Salario(String banco, int agencia, int numero, TipoConta tipoConta, double saldo) {
-        super(banco, agencia, numero, TipoConta.SALARIO, saldo);
+
+    private int quantidadeDeSaques;
+
+    public Salario(String nomeCliente, int agencia, int numero, double saldo) {
+        super(nomeCliente, agencia, numero, TipoConta.SALARIO, saldo);
+        this.quantidadeDeSaques = quantidadeDeSaques;
+
     }
 }
