@@ -23,4 +23,16 @@ public class Cliente implements Autenticador{
                 "| senha='" + senha + '\'' +
                 '|';
     }
+
+    @Override
+    public boolean autentica(String senha) {
+        if (this.senha != senha) {
+            System.out.println("Não autenticado!");
+            return false;
+        }
+        else {
+            System.out.println("Autenticado!!!");
+            return true;
+        }
+    }
 }
