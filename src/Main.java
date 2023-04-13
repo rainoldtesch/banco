@@ -45,12 +45,12 @@ public class Main {
                 System.out.print("->> Qual o valor de cheque especial? ");
                 double chequeEspecial = scanner.nextDouble();
 
-                Corrente novaContaCorrente = new Corrente();
-                novaContaCorrente.setNomeCliente(nomeCliente);
-                novaContaCorrente.setAgencia(agencia);
-                novaContaCorrente.setNumero();
-                novaContaCorrente.setTipoConta();
-                ContasDB.addNovaConta(novaContaCorrente);
+                //Corrente novaContaCorrente = new Corrente();
+                //novaContaCorrente.setNomeCliente(nomeCliente);
+                //novaContaCorrente.setAgencia(agencia);
+                //novaContaCorrente.setNumero();
+                //novaContaCorrente.setTipoConta();
+                //ContasDB.addNovaConta(novaContaCorrente);
 
                 //mensagem de feedback para cadastro de nova conta corrente:
                 System.out.println(" ");
@@ -69,10 +69,10 @@ public class Main {
                 System.out.print("->> Qual a agência da nova conta? ");
                 int agencia = scanner.nextInt();
 
-                Poupanca novaContaPoupanca = new Poupanca();
-                novaContaPoupanca.setNomeCliente(nomeCliente);
-                novaContaPoupanca.setAgencia(agencia);
-                ContasDB.addNovaConta(novaContaPoupanca);
+                //Poupanca novaContaPoupanca = new Poupanca();
+                //novaContaPoupanca.setNomeCliente(nomeCliente);
+                //novaContaPoupanca.setAgencia(agencia);
+                //ContasDB.addNovaConta(novaContaPoupanca);
 
                 //mensagem de feedback para cadastro de nova conta corrente:
                 System.out.println(" ");
@@ -91,10 +91,10 @@ public class Main {
                 System.out.print("->> Qual a agência da nova conta? ");
                 int agencia = scanner.nextInt();
 
-                Salario novaContaSalario = new Salario();
-                novaContaSalario.setNomeCliente(nomeCliente);
-                novaContaSalario.setAgencia(agencia);
-                ContasDB.addNovaConta(novaContaSalario);
+                //Salario novaContaSalario = new Salario();
+                //novaContaSalario.setNomeCliente(nomeCliente);
+                //novaContaSalario.setAgencia(agencia);
+                //ContasDB.addNovaConta(novaContaSalario);
 
                 //mensagem de feedback para cadastro de nova conta corrente:
                 System.out.println(" ");
@@ -109,13 +109,13 @@ public class Main {
                 System.out.println(" --- |  LISTANDO CONTAS CADASTRADAS  | --- ");
                 System.out.println("     =================================");
 
-                for(Conta conta : ContasDB.getContaList()) {
-                    System.out.println("Conta " + conta.getTipoConta());
-                    System.out.println("Nome do cliente: " + conta.getNomeCliente());
-                    System.out.println("Agência: " + conta.getAgencia());
-                    System.out.println("Número: " + conta.getNumero());
-                    System.out.println("Saldo: R$ " + conta.getSaldo());
-                }
+                //for(Conta conta : ContasDB.getContaList()) {
+                //    System.out.println("Conta " + conta.getTipoConta());
+                //    System.out.println("Nome do cliente: " + conta.getNomeCliente());
+                //    System.out.println("Agência: " + conta.getAgencia());
+                //    System.out.println("Número: " + conta.getNumero());
+                //    System.out.println("Saldo: R$ " + conta.getSaldo());
+                //}
                 break;
             }
 
