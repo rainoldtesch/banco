@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ContasDB {
-    private List<Conta> contaList = new ArrayList<>();
+    public List<Conta> contaList = new ArrayList<>();
 
     public List<Conta> getContaList() {
         return contaList;
